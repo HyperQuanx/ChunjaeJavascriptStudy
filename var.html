@@ -23,6 +23,7 @@
       console.log(`지역 코드 블럭 외부 ${a}`);
       console.log(`지역 코드 블럭 외부 ${b}`);
 
+      const c = 40;
       function sum2() {
         let a = 50;
         let c = 70;
@@ -30,8 +31,17 @@
         console.log(`함수 코드 블럭 내부 ${c}`);
       }
       sum2();
-      console.log(`함수 코드 블럭 내부 ${a}`);
-      console.log(`함수 코드 블럭 내부 ${c}`);
+      console.log(`함수 코드 블럭 외부 ${a}`);
+      console.log(`함수 코드 블럭 외부 ${c}`);
+
+      console.log(numx);
+      var numx = 10;
+
+      printX();
+
+      function printX() {
+        console.log("Hello...");
+      }
     </script>
   </body>
 </html>

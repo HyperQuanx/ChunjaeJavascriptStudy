@@ -72,5 +72,7 @@
 // var arrSting = ["a", "b", "c"];
 // var arr2 = new array("a", "b", "c");
 
-let a = function () {};
-let b = () => {};
+// let a = function () {};
+// let b = () => {};
+
+
