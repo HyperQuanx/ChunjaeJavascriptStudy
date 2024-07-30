@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write(`<h1>객체 접근 방법</h1>`);
+
+      var arr = ["banana", "apple", "strawberry", "peach"];
+
+      for (let i = 0; i < arr.length; i++) {
+        document.write(`${arr[i]}<br>`);
+      }
+
+      document.write(`<hr>`);
+
+      for (var idx in arr) {
+        document.write(`${arr[idx]}<br>`);
+      }
+
+      document.write(`<hr>`);
+      for (var item of arr) {
+        document.write(`${item}<br>`);
+      }
+
+      var obj = {
+        student: [
+          {
+            name: '철수"쿤"',
+            age: 5,
+          },
+          {
+            name: '짱구"쿤"',
+            age: 5,
+          },
+          {
+            name: '훈이"쿤"',
+            age: 5,
+          },
+          {
+            name: '맹구"쿤"',
+            age: 5,
+          },
+          {
+            name: '유리"짱"',
+            age: 5,
+          },
+        ],
+        // school: [
+        //   {
+        //     name: "서울",
+        //   },
+        // ],
+      };
+
+      //   for (var items in obj) {
+      //     for (var item of obj[items]) {
+      //       for (var ele in item) {
+      //       }
+      //     }
+      //   }
+
+      //   for (var key in obj) {
+      //     document.write(`키 : ${key}, 값 : ${obj[key]}<br>`);
+      //   }
+    </script>
+  </body>
+</html>

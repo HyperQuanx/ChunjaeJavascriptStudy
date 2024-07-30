@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        for 문
+        <p>for ( 초기값; 조건; 증가식 ) { 실행문; 조건문; 반복문; 함수; ...}</p>
+      </li>
+      <li>초기값 : for 문에서 사용하는 반복 조건값을 초기화</li>
+      <li>조건 : 조건이 true 동안에 for 문이 반복</li>
+      <li>증가식 : for문이 반복되는 동안 초기값 증가</li>
+    </ul>
+
+    <ul>
+      <li>white문</li>
+      <li>
+        <p>
+          white (조건) {<br />
+          실행구문; for문; while문; 함수; 선언; break; continue; ..... }<br />
+        </p>
+      </li>
+      <li>do ~ while문</li>
+      <li><p>do{ 실행구문; break; continue; } while(조건);</p></li>
+    </ul>
+    <script>
+      //   var i = 0;
+      //   let sum = 0;
+      //   for (var i = 1; i < 10; i++) {
+      //     sum += i;
+      //     document.write("i = " + i + " sum = " + sum + "<br>");
+      //   }
+      //   document.write("i = " + i + " sum = " + sum);
+
+      //   var i = 0;
+      //   document.write("<ul>");
+      //   for (;;) {
+      //     document.write("<li>" + i + "</li>");
+      //     document.write("break 앞부분 : " + i + "<br>");
+      //     if (i > 10) {
+      //       break;
+      //     }
+      //     document.write("break 뒷부분 : " + i + "<br>");
+      //     i++;
+
+      //     document.write("continue 앞부분 : " + i + "<br>");
+      //     if (i < 10) {
+      //       continue;
+      //     }
+      //     document.write("continue 뒷부분 : " + i + "<br>");
+      //   }
+
+      var i = 123;
+      for (var i = 0, name = "김두한", age = 10; i < 10; i++) {
+        i++;
+        document.write("<br>i : " + i + "<br>");
+        break;
+      }
+      document.write("i : " + i + "<br>");
+      document.write(name + i + "<br>");
+    </script>
+
+    <script>
+      document.write("i : " + i + "<br>");
+    </script>
+  </body>
+</html>
