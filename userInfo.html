@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let user = {
+        menInfo: [
+          { name: "한덕용", id: "1234" },
+          { name: "김덕용", id: "9634" },
+          { name: "이덕용", id: "8597" },
+          { name: "박덕용", id: "3235" },
+          { name: "최덕용", id: "1789" },
+          { name: "송덕용", id: "8564" },
+          { name: "신덕용", id: "2864" },
+          { name: "홍덕용", id: "6847" },
+          { name: "조덕용", id: "6423" },
+          { name: "강덕용", id: "7634" },
+          { name: "정덕용", id: "4321" },
+        ],
+      };
+
+      // 추첨 : 4명
+      //   console.log(Object.values(user.menInfo[0]));
+      function randomUser(u) {
+        let ranUr = [];
+
+        let ranNumArr = [];
+
+        while (ranNumArr.length < 4) {
+          let ranNum = Math.floor(Math.random() * 11);
+          ranNumArr.push(ranNum);
+          for (let j = 0; j < ranNumArr.length - 1; j++) {
+            if (ranNumArr[j] == ranNum) {
+              ranNumArr.splice(j, 1);
+            }
+          }
+          if (ranNumArr.length == 4) {
+            for (let arar of ranNumArr) {
+              console.log(arar);
+              ranUr.push(u.menInfo[arar]);
+            }
+          }
+        }
+
+        for (let i = 0; i < ranUr.length; i++) {
+          document.write(
+            `당첨자는 : ${Object.values(ranUr[i])[0].replace(
+              "덕용",
+              "**"
+            )} id : ${Object.values(ranUr[i])[1]}<br>`
+          );
+        }
+      }
+
+      randomUser(user);
+    </script>
+  </body>
+</html>
+
+<!-- function getObjKeyList(obj) {
+  return Object.keys(obj);
+}
+
+ 객체를 입력받아서 객체의 값 목록을 추출  Array Return
+ function getObjValueList(obj) {
+  return Object.values(obj);
+} -->
+
+<!-- let lottoNum = [];
+      while (lottoNum.length < 6) {
+        let ranLottoNum = Math.floor(Math.random() * 45) + 1;
+        lottoNum.push(ranLottoNum);
+        for (let i = 0; i < lottoNum.length - 1; i++) {
+          if (lottoNum[i] == ranLottoNum) {
+            console.log(ranLottoNum);
+            console.log(lottoNum[i]);
+            lottoNum.splice(i, 1);
+            // break;
+          }
+        }
+      }
+      lottoNum.sort((a, b) => {
+        return a - b;
+      });
+      document.write(`<table><tr>`);
+      document.write(`오늘의 당첨번호입니다.`);
+      for (let j = 0; j < lottoNum.length; j++) {
+        document.write(`<td>${lottoNum[j]}</td>`);
+      }
+      document.write(`</tr></table>`); -->

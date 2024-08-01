@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 세가지 포문을 이용하여 평균을 구하는 함수를 각각 작성해 보시오
+      let arrScore = [30, 50, 70, 80, 90, 75];
+
+      function qqq(a) {
+        let sum = 0;
+        for (let i = 0; i < a.length; i++) {
+          sum += a[i];
+        }
+        return sum / arrScore.length;
+      }
+      document.write(`${qqq(arrScore)}<br>`);
+
+      function inn(e) {
+        let summ = 0;
+        for (let arr in arrScore) {
+          summ += arrScore[arr];
+        }
+        return summ / arrScore.length;
+      }
+      document.write(`${inn(arrScore)}<br>`);
+
+      function off(w) {
+        let summm = 0;
+        for (let arr of arrScore) {
+          summm += arr;
+        }
+        return summm / arrScore.length;
+      }
+      document.write(`${off(arrScore)}<br>`);
+
+      //   in은 배열이나 객체의 위치, of는 순서대로 값 출력
+    </script>
+  </body>
+</html>

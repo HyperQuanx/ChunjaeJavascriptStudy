@@ -75,4 +75,10 @@
 // let a = function () {};
 // let b = () => {};
 
+// let ranNum = Math.floor(Math.random() * 10);
+// console.log(ranNum);
 
+let q = ["qwe", "ewq", "qwer"];
+let qw = q.splice(0, 2);
+console.log(qw);
+console.log(q);

@@ -6,10 +6,15 @@
 
 // a(v);
 
-let a = (w) => {
-  w ? document.write(`확인고름 : ${w}`) : document.write(`취소고름 : ${w}`);
-};
+// let a = (w) => {
+//   w ? document.write(`확인고름 : ${w}`) : document.write(`취소고름 : ${w}`);
+// };
 
-let b = confirm(`confirm 실험 예 아니오`);
+// let b = confirm(`confirm 실험 예 아니오`);
 
-a(b);
+// a(b);
+
+var nums = [1, 2, 3];
+var ret1 = nums.push(4, 5);
+console.log(ret1);
+console.log(nums);

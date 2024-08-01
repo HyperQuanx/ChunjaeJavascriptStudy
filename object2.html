@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      tr td {
+        border: 1px solid black;
+      }
+      td {
+        width: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>표준 내장 객체</h1>
+
+    <ul>
+      <li>자바스크립트에 기본으로 내장된 객체</li>
+      <li>
+        문자열 객체
+        <ul>
+          <li>문자(char), 문자열{string), 'a', "a"</li>
+        </ul>
+      </li>
+      <li>
+        Array 객체
+        <ul>
+          <li>배열과 관련된 속성, 메서드가 미리 정의되어 있음</li>
+          <li>
+            파괴적 메서드 : 기본 메서드를 사용했을 때, 원본 데이터가 변경되는
+            메서드
+          </li>
+          <li>
+            비파괴적 메서드 : 기본 메서드를 사용했을 때, 원본 데이터가 영향을
+            받지 않는 메서드
+          </li>
+          <li>let 변수명 = [초기화]</li>
+          <li>let 변수명 = new Array[초기화]</li>
+        </ul>
+      </li>
+      <li>
+        날짜
+        <ul>
+          <li>날짜와 시간을 다루는 Date 객체</li>
+          <li>get 메서드 : 날짜와 시간 정보를 가져오는 메서드</li>
+          <li>set 메서드 : 날짜와 시간 정보를 설정하는 메서드</li>
+          <li>let 변수명 = new Date()</li>
+        </ul>
+      </li>
+      <li>
+        수학 연산
+        <ul>
+          <li>수학 연산과 관련있는 속성과 메서드가 정의된 객체 Math</li>
+          <li>random() 메서드 : 0 ~ 1 사이의 난수를 반환하는 메서드</li>
+        </ul>
+      </li>
+    </ul>
+
+    <script>
+      const email = "test!@naver.com";
+      // //   email.
+      // if (email.includes("@") === false) {
+      //   alert("올바른 이메일 형식이 아닙니다.");
+      // }
+
+      // const arrEmail = email.split("@");
+      // const ALLOW_STRING =
+      //   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_.";
+      // let checkFlag = true;
+      // //   alert(`${arrEmail[0]}_${arrEmail[1]}`);
+      // //   for (let i = 0; i < arrEmail[0].length; i++) {
+      // //     arrEmail[0].charAt[i];
+      // //   }
+      // for (let arr in arrEmail) {
+      //   console.log(`${arrEmail[arr].length} :: ${arrEmail[arr]}`);
+      //   checkFlag = checkChar(ALLOW_STRING, arrEmail[arr]);
+      //   if (!checkFlag) {
+      //     break;
+      //   }
+      //   // for (let i = 0; i < arrEmail[arr].split(""); i++) {
+      //   //   // 로직 들어갈 예정
+      //   // }
+      //   // for (let i = 0; i < arrEmail[arr].length; i++) {
+      //   //   console.log(arrEmail[arr].substring);
+      //   // }
+      //   // checkFlag =
+      // }
+      // alert("checkFlag : " + checkFlag);
+      // function checkLength(minLength = 1, maxLength = 20, strLength) {
+      //   if (strLength <= minLength || strLength > maxLength) {
+      //     return false;
+      //   } else return true;
+      // }
+
+      // function isNumeric(str) {
+      //   if (parseInt(str) != NaN) {
+      //     // 숫자 체크하는 함수
+      //   }
+      // }
+
+      // function checkChar(arrowStr, str) {
+      //   if (!allowStr) {
+      //     allowStr = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_.";
+      //   }
+      //   if (!str) return false;
+
+      //   let checkFlag = false;
+
+      //   for (let i = 0; i < str.length; i++) {
+      //     for (let j = 0; j < allowStr.length; j++) {
+      //       if (str[i] === allowStr[j]) {
+      //         checkFlag = true;
+      //         break;
+      //       }
+      //     }
+
+      //     if (!allowStr.include(str[i])) checkFlag == false;
+      //     if (checkFlag == false) {
+      //       break;
+      //     }
+      //   }
+      // }
+
+      // // for (let arr of arrEmail) {
+      // // }
+      // // for (let i = 0; i < arrEmail.length; i++) {}
+
+      // let date = new Date();
+      // document.write(`현재 시각은 : ${date}`);
+      // document.write(`현재 시각은 : ${date.toLocaleString()}<br>`);
+      // document.write(`${date.getHours()}<br>`);
+      // document.write(`${date.getMinutes()}<br>`);
+      // document.write(`${date.getHours()}시 ${date.getMinutes()}분 <br>`);
+
+      // if (date.getHours() > 14) {
+      //   document.write(`14시가 지남 <br>`);
+      // }
+      // // date로 dueDate 조절.   ex) 예약 등
+
+      // let randNum = Math.random();
+      // document.write(`${randNum} <br>`);
+
+      // function getRandNo(max) {
+      //   return Math.floor(Math.random() * max) + 1;
+      // }
+      // const rndNo = getRandNo(44);
+      // document.write(`${rndNo}<br>`);
+
+      // let lottoNum = [];
+      // for (let i = 0; i < 6; i++) {
+      //   let ranLottoNum = Math.floor(Math.random() * 45) + 1;
+      //   console.log(ranLottoNum);
+      //   lottoNum.push(ranLottoNum);
+      //   console.log(lottoNum.every(ranLottoNum));
+      //   // if (lottoNum.every(ranLottoNum)) {
+
+      //   // }
+      // }
+      // console.log(lottoNum.sort());
+      // console.log(lottoNum.length);
+      // // lottoNum.push(ranLottoNum);
+
+      // // while (lottoNum.length < 6) {
+      // //   lottoNum.unshift(ranLottoNum);
+      // // }
+
+      // function getRndNo(min, max) {
+      //   return Math.floor(Math.random() * (max - min)) + 1;
+      // }
+
+      // function getLottoNo() {
+      //   let arrLottoNo = [0, 0, 0, 0, 0, 0];
+      //   let tmpNo = 0;
+      //   let checkFlag = false;
+      //   while (true) {
+      //     tmpNo = getRndNo(1, 45);
+      //     for (let i = 0; i < arrLottoNo.length; i++) {
+      //       if (arrLottoNo[i] == tmpNo) {
+      //         checkFlag = false;
+      //       }
+      //     }
+      //     if (!checkFlag) {
+      //       arrLottoNo[lottoCnt] = tmpNo;
+      //       lottoCnt++;
+      //     }
+      //   }
+      //   return arrLottoNo;
+      // }
+
+      // document.write()
+
+      let lottoNum = [];
+      while (lottoNum.length < 6) {
+        let ranLottoNum = Math.floor(Math.random() * 45) + 1;
+        lottoNum.push(ranLottoNum);
+        for (let i = 0; i < lottoNum.length - 1; i++) {
+          if (lottoNum[i] == ranLottoNum) {
+            console.log(ranLottoNum);
+            console.log(lottoNum[i]);
+            lottoNum.splice(i, 1);
+            // break;
+          }
+        }
+      }
+      lottoNum.sort((a, b) => {
+        return a - b;
+      });
+      document.write(`<table><tr>`);
+      document.write(`오늘의 당첨번호입니다.`);
+      for (let j = 0; j < lottoNum.length; j++) {
+        document.write(`<td>${lottoNum[j]}</td>`);
+      }
+      document.write(`</tr></table>`);
+    </script>
+  </body>
+</html>
+
+<!-- 플로우 차트 
+1. random
+2. array yes/no
+3. array N
+4. array
+-->
+
+<!-- es6, jquery 시험범위 X -->

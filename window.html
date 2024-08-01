@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="https://www.google.com" target="_blank"
+          >새 창을 열어주세요 1</a
+        >
+      </li>
+      <li><a onclick="window_open()"> 새 창을 열어주세요 2 </a></li>
+    </ul>
+
+    <div id="div1">ggg</div>
+    <div onclick=" div_open()">없애기</div>
+
+    <script>
+      function window_open(url, target, props) {
+        if (!url) {
+          url = "https://daum.net";
+        }
+        if (!target) {
+          target = "NOTICE";
+        }
+        if (!props) {
+          props = "width=400px";
+        }
+        window.open(url, target, props);
+      }
+
+      //   let tf = true;
+
+      //   function trueFalse() {
+      //     return !tf;
+      //   }
+
+      //   function div_open() {
+      //     trueFalse(!tf);
+      //     if (tf) {
+      //       document.getElementById("div1").style.backgroundColor = "red";
+      //     } else {
+      //       document.getElementById("div1").style.backgroundColor = "blue";
+      //     }
+      //     return !tf;
+      //   }
+      //   console.log(tf);
+    </script>
+  </body>
+</html>

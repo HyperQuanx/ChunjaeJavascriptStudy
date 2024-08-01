@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      const p1 = {};
+      const person = {
+        name: {
+          firstName: "Gildong",
+          lastName: "Hong",
+        },
+        hobby: ["football", "baseball"],
+        hello: () => {
+          return "hello";
+        },
+      };
+
+      //   for (var item in person.hobby) {
+      //     // for in 구문
+      //   }
+
+      //   for (var item of person.hobby) {
+      //     // for of 구문
+      //   }
+
+      console.log(person.name.firstName);
+      // 둘 다 같은 방식. 위에께 좀 더 편해보임
+      console.log(person["name"]["firstName"]);
+
+      const person1 = {};
+      person1.name = {
+        firstName: "길동",
+        lastName: "홍",
+      };
+      person1.hobby = ["축구", "야구", "골프", "농구"];
+      person1.hello = () => {
+        return "goodbye";
+      };
+
+      console.log(person1);
+      console.log(person1.name.firstName);
+      console.log(person1.name.lastName);
+
+      const persons = { personList: [person, person1] };
+
+      let num1 = 20;
+      let num2 = num1;
+      num1 = 30;
+
+      //   console.log(num1);
+      //   console.log(num2);
+
+      const copyPerson = person1;
+      person1.name.firstName = "길순";
+
+      console.log(person1.name.firstName);
+      console.log(copyPerson.name.firstName);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>문서 객체 모델 (DOM : Document Object Model)</h1>
+    <ul>
+      <li>
+        DOM 트리
+        <ul>
+          <li>
+            웹 문서에 있는 요소들 간의 부모, 자식 관계를 계층 구조로 표시한 것
+          </li>
+          <li>자바스크립트가 이해할 수 있도록 객체화한 모델 구조</li>
+          <li>나무 형태로 표현되기 때문에 DOM 트리 라고 함</li>
+          <li>노드(node) : DOM 트리에서 가지가 갈라져 나간 항목</li>
+          <li>루트 노드 (root node) : DOM 트리의 시작 부분</li>
+          <li>모든 HTML 태그는 요소(element) 노드</li>
+          <li>
+            웹 문서의 텍스트 내용은 요소 노드의 자식 노드인 텍스트(text)노드
+          </li>
+          <li>태그의 속성 : 요소 노드의 자식 노드인 속성(attribute)노드</li>
+          <li>주석 : 주석(comment) 노드</li>
+          <li>
+            attribute vs property
+            <ul>
+              <li>
+                <a
+                  href="https://inpa.tistory.com/entry/%F0%9F%8C%90-attribute-property-%EC%B0%A8%EC%9D%B4"
+                  >이걸 찾아보자</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        노드의 타입
+        <ul>
+          <li>
+            문서 노드(Node.DOCUMENT_NODE) : 최상위 DOCUMENT 객체의 노드 타입
+          </li>
+          <li>
+            요소 노드(Node.ELEMENT_NODE) : 요소의 노드 타입 -> h1, p 태그
+            등등...
+          </li>
+          <li>
+            속성 노드(Node.ATTRIBUTE_NODE) : 속성의 노드 타입 -> href. src...
+          </li>
+          <li>텍스트 노드(Node.TEXT_NODE) : 텍스트에 해당하는 노드 타입</li>
+          <li>주석 노드(Node.COMMENT_NODE) : 주석에 해당하는 노드 타입</li>
+        </ul>
+      </li>
+      <li>
+        DOM 요소에 접근 방법
+        <ul>
+          <li>
+            getElementById("id이름") 메서드
+            <ul>
+              <li>형식 : 요소명.getElementById("id명")</li>
+            </ul>
+          </li>
+          <li>
+            getElementByClass() 메서드
+            <ul>
+              <li>형식 : 요소명.getElementByClass("class명")</li>
+            </ul>
+          </li>
+          <li>
+            getElementByName() 메서드
+            <ul>
+              <li>형식 : 요소명.getElementByName("태그명")</li>
+            </ul>
+          </li>
+          <li>
+            querySelector() 메서드
+            <ul>
+              <li>형식 : 요소명.querySelector("선택자")</li>
+            </ul>
+          </li>
+          <li>
+            querySelectorAll() 메서드
+            <ul>
+              <li>형식 : 요소명.querySelectorAll("선택자 또는 태그")</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
+
+<!-- 함수에서 매개변수가 없을 때 리턴값이 없을 때 -->
