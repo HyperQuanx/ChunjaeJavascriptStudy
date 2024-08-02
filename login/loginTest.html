@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="id1" value="" />
+    <input type="password" id="pw1" value="" />
+    <button id="submit">로그인</button>
+    <button id="logout" onclick="logout()">로그아웃</button>
+    <script>
+      document.querySelector("#submit").addEventListener("click", () => {
+        // console.log(`${document.querySelector("#id1").value}`);
+        localStorage.setItem("id", `${document.querySelector("#id1").value}`);
+        alert(`환영합니다 ${localStorage.getItem("id")}`);
+        location.reload();
+      });
+
+      let logout = () => {
+        localStorage.clear();
+        alert(`로그아웃 되었습니다.`);
+        location.reload();
+      };
+
+      if (localStorage.getItem("id") === null) {
+        document.write("로그인 해주세요");
+      } else {
+        document.write(localStorage.getItem("id"));
+      }
+
+      
+    </script>
+  </body>
+</html>
+
+<!-- 로컬스토리지에 객체 형식으로 저장하고 대조하기 -->
+<!-- 회원가입 페이지에 넣고 로그인 페이지에서는 대조하기 -->

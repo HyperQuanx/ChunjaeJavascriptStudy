@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소 조작</title>
+  </head>
+  <body>
+    <!-- <p id="title">
+      hello, <span style="display: none">Javascript</span>
+      <span>보임</span>
+      <span style="display: none">안보임</span>
+    </p> -->
+
+    <div>
+      <p id="textContent">textContent</p>
+      <p id="innerText">innerText</p>
+      <p id="innerHTML">innerHTML</p>
+    </div>
+    <div>
+      <button onclick="ran()">innerHTML 변경</button>
+      <button onclick="ran2()">생성</button>
+    </div>
+
+    <script>
+      //   let el1 = document.getElementById("title").textContent;
+      //   let el2 = document.getElementById("title").innerText;
+      //   let el3 = document.getElementById("title").innerHTML; // html코드를 그대로 가져옴
+
+      //   document.write(`el1 : ${el1}<br>`);
+      //   document.write(`el2 : ${el2}<br>`);
+      //   document.write(`el3 : <pre>${el3}</per><br>`);
+    </script>
+    <script>
+      //   let changeInnerHTML = () => {
+      //     document.getElementByName("p").innerHTML =
+      //       "<span style='color:" + ranCo() + ";'>textContent</span>";
+      //     document.getElementByName("p").innerHTML =
+      //       "<span style='color:" + ranCo() + ";'>textContent</span>";
+      //     document.getElementByName("p").innerHTML =
+      //       "<span style='color:" + ranCo() + ";'>textContent</span>";
+      //   };
+
+      let ranCo = () => {
+        let arrColors = [
+          "red",
+          "blue",
+          "yellow",
+          "purple",
+          "viloet",
+          "cyon",
+          "green",
+          "gray",
+          "orange",
+          "aqua",
+        ];
+        let rndNo = Math.floor(Math.random() * 10);
+        return arrColors[rndNo];
+      };
+
+      let ran = () => {
+        let arrId = ["textContent", "innerText", "innerHTML"];
+        let rndNo = Math.floor(Math.random() * 3);
+        document.getElementById(arrId[rndNo]).innerHTML =
+          "<span style='color:" + ranCo() + ";'>textContent</span>";
+      };
+
+      //   function getRndNo(min, max, minFlag) {
+      //     let rndNo =
+      //       minFlag == true
+      //         ? Math.floor(Math.random() * (max + min) + 1 + min)
+      //         : Math.floor(Math.random() * (max - min) + 1 + min);
+      //   }
+
+      function ran2() {
+        let arrColors2 = [];
+        while (arrColors2.length < 3) {
+          if (!arrColors2.includes(ranCo())) {
+            arrColors2.push(ranCo());
+          }
+        }
+
+        let arrId = ["textContent", "innerText", "innerHTML"];
+
+        // let rndNo = getRndNo(0, 3, true);
+
+        let ppap = document.getElementsByTagName("p");
+        console.log(ppap);
+        for (let x in ppap) {
+          //   console.log(p);
+            p.innerHTML = `<span style='color:${arrColors2[1]};'>${p.innerText}</span>`;
+          //   console.log(arrColors2.length);
+          console.log(x);
+          ppap[x].style.color = arrColors2[x];
+          // getElementsByTagName로 배열을 가져오면 htmlcollection의 프로토타입 이상한걸 뱉음
+        }
+      }
+    </script>
+  </body>
+</html>

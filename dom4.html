@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red-color {
+        color: red;
+      }
+
+      .blue-color {
+        color: blue;
+      }
+
+      .f-size {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1" class="box-1" data-nameList="">
+      <p id="text1" class="text">text-1</p>
+      <p class="text">text-2</p>
+    </div>
+    <div id="div2" class="box-2">
+      <p class="text">text-3</p>
+      <p class="text">text-4</p>
+    </div>
+
+    <div>
+      <a href="https://www.naver.com/">네이버</a>
+    </div>
+
+    <div>
+      <button onclick="changeBg()">배경색</button>
+      <button onclick="changeClass()">클래스 변경</button>
+      <button onclick="removeClass()">클래스 삭제</button>
+      <button onclick="changeW()">로직</button>
+      <button onclick="addAttr()">속성 추가</button>
+    </div>
+    <script>
+      //   const el = document.querySelector(".text");
+      //   const el2 = (document.querySelector("#div1").style.backgroundColor =
+      //     "aqua");
+      //   const el3 = document.querySelectorAll(".text");
+      //   document.write(`${el.innerHTML}<br>`);
+      //   document.write(`${JSON.stringify(el3)}`);
+
+      let boo = true;
+
+      //   let redColor =
+      //   let blueColor =
+
+      function changeBg(divId = "#div1") {
+        let a = () => {
+          const pEl = document.querySelectorAll("#div1");
+          //   div1.style.translation = "2s";
+          div1.style.backgroundColor = "#ff0000";
+          div1.style.fontSize = "20px";
+          div1.style.color = "#ffffff";
+          boo = false;
+          document.querySelectorAll("#div2");
+          const pEl2 = document.querySelectorAll("#div2");
+          div2.style.backgroundColor = "blue";
+          div2.style.fontSize = "20px";
+          div2.style.color = "#ffffff";
+        };
+
+        let b = () => {
+          const pEl1 = document.querySelectorAll("#div2");
+          div2.style.backgroundColor = "#ff0000";
+          div2.style.fontSize = "20px";
+          div2.style.color = "#ffffff";
+          boo = true;
+          const pEl2 = document.querySelectorAll("#div1");
+          div1.style.backgroundColor = "blue";
+          div1.style.fontSize = "20px";
+          div1.style.color = "#ffffff";
+        };
+
+        return boo ? a() : b();
+
+        // if (boo) {
+        //   const pEl = document.querySelectorAll("#div1");
+        //   div1.style.backgroundColor = "#ff0000";
+        //   div1.style.fontSize = "20px";
+        //   div1.style.color = "#ffffff";
+        //   boo = false;
+        //   document.querySelectorAll("#div2");
+        //   const pEl3 = document.querySelectorAll("#div2");
+        //   div2.style.backgroundColor = "#ffffff";
+        //   div2.style.fontSize = "20px";
+        //   div2.style.color = "black";
+        // } else if (!boo) {
+        //   const pEl2 = document.querySelectorAll("#div2");
+        //   div2.style.backgroundColor = "#ff0000";
+        //   div2.style.fontSize = "20px";
+        //   div2.style.color = "#ffffff";
+        //   boo = true;
+        //   const pE4 = document.querySelectorAll("#div1");
+        //   div1.style.backgroundColor = "#ffffff";
+        //   div1.style.fontSize = "20px";
+        //   div1.style.color = "black";
+        // }
+      }
+
+      // 클래스 추가
+      let changeClass = () => {
+        const pEl = document.querySelector("#text1");
+        pEl.classList.add("red-color", "f-size");
+      };
+
+      // 클래스 삭제
+      let removeClass = () => {
+        const pEl = document.querySelector("#text1");
+        pEl.classList.remove("red-color");
+      };
+
+      // 각각의 p 태그의 클래스 요소에서 red가 있으면 blue로 변환
+      // blue가 있으면 red로 바꾸고
+      // font-size 요소가 있으면 제거, 없으면 추가하는 로직 작성
+      let aBol = 0;
+      let bBol = false;
+      let changeW = () => {
+        console.log(bBol);
+        const pE = document.querySelectorAll("p");
+        // console.log(pE);
+        if (bBol) {
+          pE[aBol].classList.remove("red-color", "f-size");
+          pE[aBol].classList.add("blue-color");
+        } else if (!bBol) {
+          pE[aBol].classList.remove("blue-color");
+          pE[aBol].classList.add("red-color", "f-size");
+        }
+        aBol++;
+        if (aBol == 4) {
+          aBol = 0;
+          bBol = !bBol;
+          console.log(aBol, bBol);
+        }
+      };
+      // .contains : 포함
+
+      //속성값 추가하기
+      // 1. 클래스 추가
+      // 2. 사용자 정의 data- 속성 추가
+      let addAttr = () => {
+        let aEl = document.querySelector("a");
+        if (aEl.classList.contains("red-color")) {
+          // aEl.style.removeClass("red-color");
+          aEl.removeAttribute("class");
+        } else {
+          aEl.setAttribute("class", "red-color");
+          aEl.setAttribute("data-link", "네이버");
+        }
+        // 이걸로 redaonly 건드리면 좋을듯
+      };
+    </script>
+  </body>
+</html>
+
+<!-- querySelector는 한개만 나옴
+querySelectorAll 는 다 나옴 -->

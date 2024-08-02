@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 5000px;
+        height: 5000px;
+      }
+      .fix {
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <button onclick="printInfo()">윈도우 정보</button><br /> -->
+    <button onabort="d()">창 이동To</button>
+    <button onclick="b()">창 이동By</button>
+    <button onclick="c()">창 열기</button>
+    <button onclick="a()">창 닫기</button>
+
+    <script>
+      function printInfo() {
+        document.write(`웹 브라우저 너비 : ${window.innerWidth}<br>`);
+        document.write(`웹 브라우저 높이 : ${window.innerHeight}<br>`);
+        document.write(`웹 브라우저 창의 너비 : ${window.outerWidth}<br>`);
+        document.write(`웹 브라우저 창의 높이 : ${window.innerHeight}<br>`);
+        document.write(
+          `웹 브라우저 창과 모니터 사이 간격 윗부분 : ${window.screenTop} : ${window.screenY}<br>`
+        );
+        document.write(
+          `웹 브라우저 창과 모니터 사이 간격 왼쪽 : ${window.screenX} : ${window.screenX}<br>`
+        );
+        document.write(`웹 브라우저 스크롤 가로 위치 : ${window.scrollY}<br>`);
+        document.write(`웹 브라우저 스크롤 세로 위치 : ${window.scrollX}<br>`);
+      }
+
+      function d() {
+        myWindow.window.moveTo(150, 130);
+      }
+
+      function b() {
+        myWindow.window.moveBy(75, 75);
+      }
+
+      function c() {
+        myWindow = window.open("", "NEW", "width=400, height=200");
+      }
+
+      let a = () => {
+        window.close();
+      };
+    </script>
+
+    <script>
+      function sTo() {
+        window.scrollTo(100, 200);
+        window.scrollTo({ top: 3000, behavior: "smooth" });
+      }
+      function sBy() {
+        window.scrollBy(100, 200);
+      }
+    </script>
+    <button onclick="sTo()" class="fix">scrollTo</button>
+    <button onclick="sBy()" class="fix" style="top: 50px">scrollBy</button>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+    <div>동해물과백두산이</div>
+  </body>
+</html>

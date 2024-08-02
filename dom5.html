@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>요소 노드 추가하기</h1>
+    <!--
+    1. a 태그 추가
+    2. a 태그에 '네이버' 추가
+    -->
+    <div id="pDiv"></div>
+    <div>
+      <button onclick="addCreateTag()">a 태그 추가1</button>
+      <button onclick="addHtml()">a 태그 추가2</button>
+      <button onclick="addLi()">li 추가3</button>
+    </div>
+    <script>
+      let addCreateTag = () => {
+        // 1. 부모 태그를 가져온다.
+        // 2. 태그 엘리먼트 생성
+        // 3. 태그의 속성을 설정
+        // 4. 페어런트 태그에 생성한 엘리먼트 추가
+
+        const pDiv = document.querySelector("#pDiv");
+        const aEl = document.createElement("a"); // a 태그 추가
+        const aHref = document.createAttribute("href");
+        aHref.value =
+          "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%ED%99%8D%EB%8C%80+%EB%AC%B4%EC%8B%A0%EC%82%AC+%ED%8C%9D%EC%97%85";
+        const aTarget = document.createAttribute("target");
+        aTarget.value = "_blank";
+        const aText = document.createTextNode("네이버");
+        aEl.appendChild(aText);
+
+        aEl.setAttributeNode(aHref);
+        aEl.setAttributeNode(aTarget);
+
+        pDiv.appendChild(aEl);
+      };
+
+      // 위 아래가 다른 이유는
+
+      let addHtml = () => {
+        const pDiv = document.querySelector("#pDiv");
+        pDiv.innerHTML += `<a href='https://www.naver.com/' target:'_blank >네이버</a>`;
+      }; // innerHTML 무한 추가하는 방법 += 쓰기
+
+      let addLi = () => {
+        const pDiv = document.querySelector("#pDiv");
+        pDiv.innerHTML += `<ul><li><a href='https://www.naver.com/' target:'_blank >네이버</a></li><li><a href='https://www.daum.net/' target:'_blank >다음</a></li></ul>`;
+      };
+    </script>
+  </body>
+</html>

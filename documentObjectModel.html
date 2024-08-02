@@ -58,19 +58,19 @@
         DOM 요소에 접근 방법
         <ul>
           <li>
-            getElementById("id이름") 메서드
+            getElementById("id명") 메서드
             <ul>
               <li>형식 : 요소명.getElementById("id명")</li>
             </ul>
           </li>
           <li>
-            getElementByClass() 메서드
+            getElementByClass("class명") 메서드
             <ul>
               <li>형식 : 요소명.getElementByClass("class명")</li>
             </ul>
           </li>
           <li>
-            getElementByName() 메서드
+            getElementByName("tag명") 메서드
             <ul>
               <li>형식 : 요소명.getElementByName("태그명")</li>
             </ul>
@@ -85,6 +85,33 @@
             querySelectorAll() 메서드
             <ul>
               <li>형식 : 요소명.querySelectorAll("선택자 또는 태그")</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        노드 추가하기
+        <ul>
+          <li>
+            요소 노드 생성
+            <ul>
+              <li>createElement(태그명)</li>
+              <li>형식 : document.createElement("a")</li>
+            </ul>
+          </li>
+          <li>
+            요소 노드에 텍스트 노드 추가하기
+            <ul>
+              <li>document.createTextNode("입력한 문자")</li>
+              <li>부모노드.appendChild(텍스트노드)</li>
+              <li>
+                추가 순서
+                <ol>
+                  <li>부모노드를 생성한다.</li>
+                  <li>자식 텍스트 노드를 생성한다.</li>
+                  <li>부모노드에 텍스트 노드를 추가한다.</li>
+                </ol>
+              </li>
             </ul>
           </li>
         </ul>
