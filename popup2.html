@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="qwe()">창 닫기</button>
+    <button onclick="cooPop()">글자변경</button>
+    <script>
+      let qwe = () => {
+        window.close();
+      };
+
+      let cooPop = () => {
+        let abcd = opener.document.querySelector("#qwerqwer");
+        // opener = 부모창
+        abcd.style.color = "red";
+      };
+    </script>
+  </body>
+</html>

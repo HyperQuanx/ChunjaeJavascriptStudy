@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="prod_cnt" data-bagcnt="0" data-bookcnt="0">
+      <div>
+        <span>가방</span><br />
+        <button onclick="addC('bag')">상품 추가 +</button>
+        <button onclick="minC('bag')">상품 삭제 -</button>
+      </div>
+      <div>
+        <span>도서</span><br />
+        <button onclick="addC('book')">상품 추가 +</button>
+        <button onclick="minC('book')">상품 삭제 -</button>
+      </div>
+    </div>
+    <script>
+      let addC = (t) => {
+        const cntEl = document.querySelector("#prod_cnt");
+        switch (t) {
+          case "bag":
+            cntEl.dataset.bagcnt++;
+            break;
+          case "book":
+            cntEl.dataset.bookcnt++;
+            break;
+          default:
+        }
+        console.log(
+          `cntEl.dataset : ${cntEl.dataset.bagcnt}, ${cntEl.dataset.bookcnt}`
+        );
+      };
+
+      let minC = (t) => {
+        const cntEl = document.querySelector("#prod_cnt");
+        switch (t) {
+          case "bag":
+            cntEl.dataset.bagcnt--;
+            break;
+          case "book":
+            cntEl.dataset.bookcnt--;
+            break;
+        }
+        cntEl.dataset.cnt =
+          cntEl.dataset.cnt > 0 ? (cntEl.dataset.cnt -= 1) : 0;
+        console.log(
+          `cntEl.dataset : ${cntEl.dataset.bagcnt}, ${cntEl.dataset.bookcnt}`
+        );
+        let countC = () => {
+          const cntEl = document.querySelector("#prod_cnt");
+          if (cntEl.dataset.bagcnt <= 0 || cntEl.dataset.bookcnt <= 0) {
+            alert("상품 갯수를 등록");
+          }
+        };
+      };
+    </script>
+
+    <hr />
+    <ul data-maxcnt="10" data-mincnt="1" id="ul" data-cnt="1">
+      <li>상품1</li>
+    </ul>
+    <button onclick="addLi()">상품 추가</button>
+    <button onclick="minLi()">상품 삭제</button>
+    <script>
+      //   let liCount = 1;
+      let addLi = () => {
+        const liEl = document.querySelector("#ul");
+        let liCnt = liEl.dataset.cnt++;
+
+        console.log(liCnt);
+      };
+      let minLi = () => {
+        const liEl = document.querySelector("#ul");
+        let liCnt = liEl.dataset.cnt--;
+
+        console.log(liCnt);
+      };
+    </script>
+  </body>
+</html>

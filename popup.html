@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>팝업 창 띄우기</h1>
+    <button onclick="pop()">팝업열기</button>
+    <button onclick="popClose()">팝업닫기</button>
+    <span id="qwerqwer">컨트롤하기</span>
+    <script>
+      let newPop = null;
+      let pop = () => {
+        // iframe 컨트롤 하는 법
+        // let frm = document.getElementById("ifrm");
+        // frm.src = "https://nomadcoders.co/courses";
+        newPop = window.open(
+          "popup2.html",
+          "팝업",
+          "width=300px, height=300px, left=300px, top=300px"
+        );
+      };
+
+      let popClose = () => {
+        newPop.close();
+      };
+    </script>
+    <iframe id="ifrm" src=""></iframe>
+  </body>
+</html>
+<!-- 
+창 사이즈 300 * 300
+화면 왼쪽 위에서 200 200
+현재 창을 닫는 버튼이 있는 팝업 창 -->

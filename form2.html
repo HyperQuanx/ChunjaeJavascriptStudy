@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    // form 태그 기본 액션 : submit(전송)
+    // 기본 동작 : name 속성으로 동작
+    
+    -->
+    <form id="frm" name="frm" action="" method="post" onsubmit="return false">
+      <div>
+        <input
+          type="text"
+          id="userName"
+          value=""
+          maxlength="20"
+          placeholder="이름을 입력하세요"
+          required
+          onfocus=""
+          onchange="asd()"
+        />
+      </div>
+      <div id="divUserName"></div>
+      <div id="tlfgja"></div>
+      <input type="button" id="btnSubmit" name="btnSubmit" value="전송" />
+      <button type="submit" onclick="sendForm()">전송</button>
+      <!-- <div id="writeqwe"></div> -->
+    </form>
+    <script>
+      let asd = () => {
+        let a = document.querySelector("#userName").value;
+        let bnn = document.querySelector("#tlfgja");
+        if (a.length < 5 || a.length > 10) {
+          bnn.innerText = "제대로 입력";
+        } else if (a.length == 0) {
+          bnn.innerText = "빈칸입니다";
+        } else {
+          bnn.innerText = "완료";
+        }
+      };
+      let sendForm = () => {
+        const frm = document.getElementById("frm");
+        let userName = frm.userName;
+        if (userName.value.length < 2 || userName.value.length > 10) {
+          alert("이름을 입력하세요.");
+          userName.focus();
+          const divUserName = document.getElementById("divUserName");
+          //   divUserName.style.color = "red";
+          divUserName.innerText = "아이디를 입력하세요";
+          return false;
+        }
+        alert(userName);
+      };
+    </script>
+  </body>
+</html>

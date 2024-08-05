@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    img {
+      border: 0px;
+    }
+    li {
+      list-style: none;
+    }
+  </style>
+  <body>
+    <h1>이미지 추가하기</h1>
+    <div>
+      <ul>
+        <li>
+          <img
+            src="public/01.png"
+            width="100px"
+            height="100px"
+            class="pic"
+            data-src="public/01.png"
+          />
+        </li>
+        <li>
+          <img
+            src="public/02.png"
+            width="100px"
+            height="100px"
+            class="pic"
+            data-src="public/02.png"
+          />
+        </li>
+        <li>
+          <img
+            src="public/03.png"
+            width="100px"
+            height="100px"
+            class="pic"
+            data-src="public/03.png"
+          />
+        </li>
+      </ul>
+    </div>
+    <div id="divImg" style="display: none">
+      <img id="img2" src="" />
+    </div>
+    <button id="imgAdd">이미지 추가</button>
+    <script>
+      let imgs = document.querySelectorAll(".pic");
+      let orgImg = "";
+      for (let i = 0; i < imgs.length; i++) {
+        imgs[i].addEventListener("click", () => {
+          let imgOrg = this.getAttribute("src");
+          let imgSrc = this.getAttribute("data-src");
+          temImg = imgSrc;
+
+          
+          const divImg = documentgetElementById("divImg");
+          const img2 = document.getElementById("img2");
+          img2.setAttribute("src", imgSrc);
+          divImg.style.display = "block";
+
+          divImg.onClick = () => {
+            this.style.display = "none";
+          };
+        });
+      }
+    </script>
+  </body>
+</html>

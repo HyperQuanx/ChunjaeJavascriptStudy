@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="img" src="" width="200px" height="200px" />
+    <button onclick="cl()">삭제</button>
+    <script>
+      let q = localStorage.getItem("src");
+      console.log(q);
+      if (q === null) {
+        let v = prompt("이미지 경로 입력");
+        localStorage.setItem("src", v);
+        location.reload();
+      } else if (q !== null) {
+        localStorage.setItem(
+          "src",
+          "https://cdn.pixabay.com/photo/2017/06/29/19/58/said-2455984_1280.jpg"
+        );
+      }
+      let img = document.querySelector("#img");
+      img.setAttribute("src", q);
+
+      let cl = () => {
+        localStorage.removeItem("src");
+        location.reload();
+      };
+    </script>
+  </body>
+</html>

@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정규식 테스트</title>
+  </head>
+  <body>
+    <input id="id" type="text" value="" oninput="asd()" />
+    <p id="log"></p>
+    <script>
+      function asd() {
+        let qwe = document.getElementById("id").value;
+        let writeInput = document.querySelector("#log");
+        if (qwe.length < 5 || qwe.length > 10) {
+          writeInput.innerText = "잘못된 값";
+        } else {
+          writeInput.innerText = "완료";
+        }
+      }
+    </script>
+  </body>
 </html>
+
+<!-- 성공 -->
